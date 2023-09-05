@@ -33,10 +33,20 @@ namespace Portfolio_Auftrag_GeoShapes
             Array.Sort(laengen);
             return (laengen[0] == laengen[1]) && (laengen[2] == laengen[3]) && (laengen[0] != laengen[2]);
         }
+
+        /// <summary>
+        /// Berechnet den Umfang eines Rechteck
+        /// </summary>
+        /// <returns>Umfang</returns>
         public double BerechneUmfang()
         {
             return linieA.Laenge + linieB.Laenge + linieC.Laenge + linieD.Laenge;
         }
+
+        /// <summary>
+        /// Berechnet die Flaeche eines Rechtecks
+        /// </summary>
+        /// <returns>Flaeche</returns>
         public double BerechneFlaeche()
         {
             if (linieA.Laenge != linieB.Laenge)

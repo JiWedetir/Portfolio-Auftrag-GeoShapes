@@ -24,14 +24,25 @@ namespace Portfolio_Auftrag_GeoShapes
                 Console.WriteLine("Die Angegebenen Werte ergeben kein Dreieck, versuchen Sie es neu.");
             }
         }
+
         private static bool IstGueltigesDreieck(double a, double b, double c)
         {
             return a + b > c && a + c > b && b + c > a;
         }
+
+        /// <summary>
+        /// Berechnet den Umfang eines Dreieck
+        /// </summary>
+        /// <returns>Umfang</returns>
         public double BerechneUmfang()
         {
             return linieA.Laenge + linieB.Laenge + linieC.Laenge;
         }
+
+        /// <summary>
+        /// Berechnet die Flaeche eines Dreieck
+        /// </summary>
+        /// <returns>Flaeche</returns>
         public double BerechneFlaeche()
         {
             double s = BerechneUmfang() / 2;

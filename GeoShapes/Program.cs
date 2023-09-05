@@ -68,13 +68,6 @@
             formenbehaelter.EntferneForm(dreieck1);
             formenbehaelter.EntferneForm(dreieck1);
             */
-
-
-
-            /*To-Do's
-            - Mögliche Fehlerquellen nicht möglich machen
-            - Linie darf nur einer Form gehören, implementieren
-            */
         }
     }
 }

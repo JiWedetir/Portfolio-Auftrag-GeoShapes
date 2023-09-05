@@ -16,12 +16,14 @@ namespace Portfolio_Auftrag_GeoShapes
         private const int minAnzahlDreiecke = 0;
         private const int maxAnzahlKreise = 3;
         private const int minAnzahlKreise = 1;
+
         public Formenbehaelter(Rechteck rechteckA, Rechteck rechteckB, Kreis kreis)
         {
             this.rechteckA = rechteckA;
             this.rechteckB = rechteckB;
             kreise.Add(kreis);
         }
+
         public void FuegeFormHinzu(Kreis kreis)
         {
             if (kreise.Count < maxAnzahlKreise) 
@@ -34,6 +36,7 @@ namespace Portfolio_Auftrag_GeoShapes
                     $"da schon die maximale Anzahl von {maxAnzahlKreise} Kreisen vorhanden ist.");
             }
         }
+
         public void FuegeFormHinzu(Dreieck dreieck)
         {
             if (dreiecke.Count < maxAnzahlDreiecke)
@@ -46,6 +49,7 @@ namespace Portfolio_Auftrag_GeoShapes
                     $"da schon die maximale Anzahl von {maxAnzahlDreiecke} Dreiecken vorhanden ist.");
             }
         }
+
         public void EntferneForm(Kreis kreis)
         {
             if (kreise.Count > minAnzahlKreise)
@@ -58,6 +62,7 @@ namespace Portfolio_Auftrag_GeoShapes
                     "da sonst weniger als 1 Kreis vorhanden ist.");
             }
         }
+
         public void EntferneForm(Dreieck dreieck)
         {
             if (dreiecke.Count > minAnzahlDreiecke)

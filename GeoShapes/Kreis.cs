@@ -13,10 +13,20 @@ namespace Portfolio_Auftrag_GeoShapes
         {
             this.linie = Linie;
         }
+
+        /// <summary>
+        /// Berechnet den Umfang eines Kreises
+        /// </summary>
+        /// <returns>Umfang</returns>
         public double BerechneUmfang()
         {
             return linie.Laenge;
         }
+
+        /// <summary>
+        /// Berechnet die Flache eines Kreises
+        /// </summary>
+        /// <returns>Flaeche</returns>
         public double BerechneFlaeche()
         {
             return Math.Pow(linie.Laenge, 2) * Math.PI;
