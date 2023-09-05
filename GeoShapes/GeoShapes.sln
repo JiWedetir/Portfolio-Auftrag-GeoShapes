@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoShapes", "GeoShapes.csproj", "{E77F6057-E18C-406B-83C1-EF201D77E07C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoShapes", "GeoShapes.csproj", "{E77F6057-E18C-406B-83C1-EF201D77E07C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoShapesTests", "..\GeoShapesTests\GeoShapesTests.csproj", "{99E86239-CD87-4CEC-BC67-D50E13D0AE55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E77F6057-E18C-406B-83C1-EF201D77E07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E77F6057-E18C-406B-83C1-EF201D77E07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E77F6057-E18C-406B-83C1-EF201D77E07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E86239-CD87-4CEC-BC67-D50E13D0AE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E86239-CD87-4CEC-BC67-D50E13D0AE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E86239-CD87-4CEC-BC67-D50E13D0AE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E86239-CD87-4CEC-BC67-D50E13D0AE55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
