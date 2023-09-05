@@ -8,18 +8,18 @@ namespace Portfolio_Auftrag_GeoShapes
 {
     public class Kreis
     {
-        public Linie Linie { get; set; }
+        private Linie linie;
         public Kreis(Linie Linie) 
         {
-            this.Linie = Linie;
+            this.linie = Linie;
         }
         public double BerechneUmfang()
         {
-            return Linie.Laenge;
+            return linie.Laenge;
         }
         public double BerechneFlaeche()
         {
-            return Math.Pow(Linie.Laenge, 2) * Math.PI;
+            return Math.Pow(linie.Laenge, 2) * Math.PI;
         }
     }
 }

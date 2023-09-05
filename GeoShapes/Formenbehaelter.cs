@@ -8,16 +8,18 @@ namespace Portfolio_Auftrag_GeoShapes
 {
     public class Formenbehaelter
     {
-        public Rechteck RechteckA { get; set; }
-        public Rechteck RechteckB { get; set; }
-        List<Dreieck> dreiecke = new List<Dreieck>();
-        List<Kreis> kreise = new List<Kreis>();
+        private Rechteck rechteckA;
+        private Rechteck rechteckB;
+        private List<Dreieck> dreiecke = new List<Dreieck>();
+        private List<Kreis> kreise = new List<Kreis>();
         private const int maxAnzahlDreiecke = 4;
+        private const int minAnzahlDreiecke = 0;
         private const int maxAnzahlKreise = 3;
+        private const int minAnzahlKreise = 1;
         public Formenbehaelter(Rechteck rechteckA, Rechteck rechteckB, Kreis kreis)
         {
-            this.RechteckA = rechteckA;
-            this.RechteckB = rechteckB;
+            this.rechteckA = rechteckA;
+            this.rechteckB = rechteckB;
             kreise.Add(kreis);
         }
         public void FuegeFormHinzu(Kreis kreis)
@@ -46,7 +48,7 @@ namespace Portfolio_Auftrag_GeoShapes
         }
         public void EntferneForm(Kreis kreis)
         {
-            if (kreise.Count > 1)
+            if (kreise.Count > minAnzahlKreise)
             {
                 kreise.Remove(kreis);
             }
@@ -58,7 +60,7 @@ namespace Portfolio_Auftrag_GeoShapes
         }
         public void EntferneForm(Dreieck dreieck)
         {
-            if (dreiecke.Count > 0)
+            if (dreiecke.Count > minAnzahlDreiecke)
             {
                 dreiecke.Remove(dreieck);
             }
@@ -68,6 +70,5 @@ namespace Portfolio_Auftrag_GeoShapes
                     "da kein Dreieck zum entfernen vorhanden ist.");
             }
         }
-
     }
 }

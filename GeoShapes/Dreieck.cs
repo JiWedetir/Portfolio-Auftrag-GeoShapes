@@ -8,16 +8,16 @@ namespace Portfolio_Auftrag_GeoShapes
 {
     public class Dreieck
     {
-        public Linie LinieA { get; set; }
-        public Linie LinieB { get; set; }
-        public Linie LinieC { get; set; }
-        public Dreieck(Linie LinieA, Linie LinieB, Linie LinieC)
+        private Linie linieA;
+        private Linie linieB;
+        private Linie linieC;
+        public Dreieck(Linie linieA, Linie linieB, Linie linieC)
         {
-            if (IstGueltigesDreieck(LinieA.Laenge, LinieB.Laenge, LinieC.Laenge))
+            if (IstGueltigesDreieck(linieA.Laenge, linieB.Laenge, linieC.Laenge))
             {
-                this.LinieA = LinieA;
-                this.LinieB = LinieB;
-                this.LinieC = LinieC;
+                this.linieA = linieA;
+                this.linieB = linieB;
+                this.linieC = linieC;
             }
             else
             {
@@ -30,12 +30,12 @@ namespace Portfolio_Auftrag_GeoShapes
         }
         public double BerechneUmfang()
         {
-            return LinieA.Laenge + LinieB.Laenge + LinieC.Laenge;
+            return linieA.Laenge + linieB.Laenge + linieC.Laenge;
         }
         public double BerechneFlaeche()
         {
             double s = BerechneUmfang() / 2;
-            double zwischenWert = s * (s - LinieA.Laenge) * (s - LinieB.Laenge) * (s - LinieC.Laenge);
+            double zwischenWert = s * (s - linieA.Laenge) * (s - linieB.Laenge) * (s - linieC.Laenge);
             return Math.Sqrt(zwischenWert);            
         }
     }

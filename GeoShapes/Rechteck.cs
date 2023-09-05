@@ -9,18 +9,18 @@ namespace Portfolio_Auftrag_GeoShapes
 {
     public class Rechteck
     {
-        public Linie LinieA { get; set; }
-        public Linie LinieB { get; set; }
-        public Linie LinieC { get; set; }
-        public Linie LinieD { get; set; }
-        public Rechteck(Linie LinieA, Linie LinieB, Linie LinieC, Linie LinieD)
+        private Linie linieA;
+        private Linie linieB;
+        private Linie linieC;
+        private Linie linieD;
+        public Rechteck(Linie linieA, Linie linieB, Linie linieC, Linie linieD)
         {
-            if (IstGueltigesRechteck(LinieA.Laenge, LinieB.Laenge, LinieC.Laenge, LinieD.Laenge))
+            if (IstGueltigesRechteck(linieA.Laenge, linieB.Laenge, linieC.Laenge, linieD.Laenge))
             {
-                this.LinieA = LinieA;
-                this.LinieB = LinieB;
-                this.LinieC = LinieC;
-                this.LinieD = LinieD;
+                this.linieA = linieA;
+                this.linieB = linieB;
+                this.linieC = linieC;
+                this.linieD = linieD;
             }
             else
             {
@@ -31,28 +31,25 @@ namespace Portfolio_Auftrag_GeoShapes
         {
             double[] laengen = {a, b, c, d};
             Array.Sort(laengen);
-            bool langeSeitenGleich = laengen[0] == laengen[1];
-            bool kurzeSeitenGleich = laengen[2] == laengen[3];
-            bool nichtAlleGleich = laengen[0] != laengen[2];
-            return langeSeitenGleich && kurzeSeitenGleich && nichtAlleGleich;
+            return (laengen[0] == laengen[1]) && (laengen[2] == laengen[3]) && (laengen[0] != laengen[2]);
         }
         public double BerechneUmfang()
         {
-            return LinieA.Laenge + LinieB.Laenge + LinieC.Laenge + LinieD.Laenge;
+            return linieA.Laenge + linieB.Laenge + linieC.Laenge + linieD.Laenge;
         }
         public double BerechneFlaeche()
         {
-            if (LinieA.Laenge != LinieB.Laenge)
+            if (linieA.Laenge != linieB.Laenge)
             {
-                return LinieA.Laenge * LinieB.Laenge;
+                return linieA.Laenge * linieB.Laenge;
             }
-            else if (LinieA.Laenge != LinieC.Laenge)
+            else if (linieA.Laenge != linieC.Laenge)
             {
-                return LinieA.Laenge * LinieC.Laenge;
+                return linieA.Laenge * linieC.Laenge;
             }
             else
             {
-                return LinieA.Laenge * LinieD.Laenge;
+                return linieA.Laenge * linieD.Laenge;
             }
         }
     }

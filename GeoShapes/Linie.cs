@@ -19,7 +19,7 @@ namespace Portfolio_Auftrag_GeoShapes
             }
             else
             { 
-                Console.WriteLine("Länge muss grösser 0 sein");
+                Console.WriteLine("Länge muss grösser 0 sein, versuchen Sie es neu.");
             }
         }
     }
